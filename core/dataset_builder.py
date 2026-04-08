@@ -145,7 +145,7 @@ names: """
 
         return stats
 
-    def build_from directories(
+    def build_from_directories(
         self,
         images_dir: Path,
         labels_dir: Path,

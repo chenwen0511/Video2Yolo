@@ -1,5 +1,5 @@
 # 视频源：RTSP/RTMP URL 或本地视频文件路径
-source: "rtsp://admin:12345@192.168.1.100/stream"
+source: "rtsp://192.168.234.1:8554/test"
 
 # GroundingDINO 文本提示词
 prompt: "electric meter"

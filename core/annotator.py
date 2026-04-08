@@ -102,7 +102,7 @@ class GroundingDINOAnnotator:
 
         # 转换为 GroundingDINO 需要的格式
         import groundingdino.util.inference as inference
-        image_transformed = inference.transform PIL(image_pil).to(self.device)
+        image_transformed = inference.transform(image_pil).to(self.device)
 
         boxes, logits, phrases = self.predict(image_transformed, image_transformed)
 
