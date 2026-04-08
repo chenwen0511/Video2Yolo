@@ -180,7 +180,7 @@ def main():
             "class_names": ["electric_meter"],
             "device": args.device or "cuda",
             "model_config": "/home/stephen/.openclaw/workspace/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py",
-            "model_checkpoint": "/home/stephen/.openclaw/workspace/models/AI-ModelScope/GroundingDINO/groundingdino_swint_ogc.pth"
+            "model_checkpoint": "weights/groundingdino_swint_ogc.pth"
         }
 
     # 检查模型文件是否存在
