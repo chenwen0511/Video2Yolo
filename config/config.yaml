@@ -24,6 +24,9 @@ class_names:
 # 设备
 device: "cuda"
 
+# GroundingDINO 目录（自动检测，可不填）
+# groundingdino_dir: "/home/nvidia/stephen/GroundingDINO"
+
 # GroundingDINO 模型路径
-model_config: "/home/stephen/.openclaw/workspace/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
-model_checkpoint: "/home/stephen/.openclaw/workspace/models/AI-ModelScope/GroundingDINO/groundingdino_swint_ogc.pth"
+model_config: "/home/nvidia/stephen/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
+model_checkpoint: "/home/nvidia/stephen/GroundingDINO/weights/groundingdino_swint_ogc.pth"

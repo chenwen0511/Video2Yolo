@@ -4,9 +4,20 @@
 import sys
 from pathlib import Path
 
-# 添加 GroundingDINO 路径
-GROUNDINGDINO_DIR = Path("/home/stephen/.openclaw/workspace/GroundingDINO")
-if str(GROUNDINGDINO_DIR) not in sys.path:
+# 添加 GroundingDINO 路径（自动检测）
+import os
+GROUNDINGDINO_DIRS = [
+    Path("/home/nvidia/stephen/GroundingDINO"),
+    Path("/home/stephen/.openclaw/workspace/GroundingDINO"),
+    Path(os.path.expanduser("~/GroundingDINO")),
+]
+GROUNDINGDINO_DIR = None
+for d in GROUNDINGDINO_DIRS:
+    if d.exists():
+        GROUNDINGDINO_DIR = d
+        break
+
+if GROUNDINGDINO_DIR and str(GROUNDINGDINO_DIR) not in sys.path:
     sys.path.insert(0, str(GROUNDINGDINO_DIR))
 
 import torch

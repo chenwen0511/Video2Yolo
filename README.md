@@ -53,7 +53,7 @@ wget -O weights/groundingdino_swint_ogc.pth \
   https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
 ```
 
-> 注意：代码中已硬编码 GroundingDINO 路径为 `/home/stephen/.openclaw/workspace/GroundingDINO`，如需更改请修改 `core/annotator.py`
+> 注意：代码会自动检测 GroundingDINO 路径（依次查找 `/home/nvidia/stephen/GroundingDINO`、`/home/stephen/.openclaw/workspace/GroundingDINO`、`~/GroundingDINO`），如需自定义请修改 `core/annotator.py`
 
 ## 配置
 
