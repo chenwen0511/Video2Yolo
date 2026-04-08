@@ -31,13 +31,29 @@ Video2Yolo/
 ## 安装
 
 ```bash
+# 1. 克隆本项目
+git clone https://github.com/chenwen0511/Video2Yolo.git
+cd Video2Yolo
+
+# 2. 安装 Python 依赖
 pip install -r requirements.txt
 
-# 下载 GroundingDINO 模型权重（如需要）
+# 3. 下载并安装 GroundingDINO
+cd /home/stephen/.openclaw/workspace  # 或任意目录
+git clone https://github.com/IDEA-Research/GroundingDINO.git
+cd GroundingDINO
+pip install -e .
+```
+
+### 下载模型权重
+
+```bash
 mkdir -p weights
 wget -O weights/groundingdino_swint_ogc.pth \
   https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
 ```
+
+> 注意：代码中已硬编码 GroundingDINO 路径为 `/home/stephen/.openclaw/workspace/GroundingDINO`，如需更改请修改 `core/annotator.py`
 
 ## 配置
 
