@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 """GroundingDINO 自动标注模块"""
 
+import sys
+from pathlib import Path
+
+# 添加 GroundingDINO 路径
+GROUNDINGDINO_DIR = Path("/home/stephen/.openclaw/workspace/GroundingDINO")
+if str(GROUNDINGDINO_DIR) not in sys.path:
+    sys.path.insert(0, str(GROUNDINGDINO_DIR))
+
 import torch
 import numpy as np
 from PIL import Image
-from pathlib import Path
 from typing import Optional
 import logging
 from tqdm import tqdm
