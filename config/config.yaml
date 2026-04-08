@@ -1,0 +1,29 @@
+# 视频源：RTSP/RTMP URL 或本地视频文件路径
+source: "rtsp://admin:12345@192.168.1.100/stream"
+
+# GroundingDINO 文本提示词
+prompt: "electric meter"
+
+# 抽帧帧率
+fps: 10
+
+# GroundingDINO 检测阈值
+box_threshold: 0.35
+text_threshold: 0.25
+
+# 数据集划分比例 (训练集)
+split_ratio: 0.8
+
+# 输出目录
+output_dir: "outputs"
+
+# 类别名称
+class_names:
+  - electric_meter
+
+# 设备
+device: "cuda"
+
+# GroundingDINO 模型路径
+model_config: "/home/stephen/.openclaw/workspace/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
+model_checkpoint: "/home/stephen/.openclaw/workspace/models/AI-ModelScope/GroundingDINO/groundingdino_swint_ogc.pth"
